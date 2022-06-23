@@ -20,7 +20,6 @@ from bokeh.models.sources import ColumnDataSource # import struktur fundamental 
 from bokeh.models import Select, Panel  # import fitur interaktif select dan panel
 from bokeh.layouts import column, row  # import column dan row untuk layouting tampilan halaman website
 from bokeh.plotting import figure # import figure untuk membuat plot
-from bokeh.models.tickers import FixedTicker
 
 def Tab_LinePlot(data_idn):
     # Inisialisasi variabel List_Prov untuk pilihan provinsi yang ingin dipilih
@@ -120,7 +119,6 @@ def Tab_Bar(data_idn):
 
     # Membuat bar diagram 
     bar = figure(width=5000, height=610, tools=corr_tools, x_range=data["Province"], toolbar_location="below")
-    #bar.yaxis.ticker = FixedTicker(ticks=list(range(0, 7000, 500)))
     bar.vbar(x="Province",top="Daily_Case", source=source,color='green')
 
     # Callbacks
