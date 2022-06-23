@@ -1,0 +1,1 @@
+web: bokeh serve — port=$PORT — allow-websocket-origin=myapp.herokuapp.com — address=0.0.0.0 — use-xheaders tubes_visualisasi_data_kelompok_4_if_42_gab05.py
