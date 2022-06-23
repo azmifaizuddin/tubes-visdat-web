@@ -14,6 +14,7 @@ Original file is located at
 4. Taufiqurrahman (1301190429)
 """
 
+from os.path import dirname, join
 import pandas as pd # Import Library Pandas
 from bokeh.models.sources import ColumnDataSource # import struktur fundamental bokeh
 from bokeh.models import Select, Panel  # import fitur interaktif select dan panel
@@ -158,7 +159,7 @@ from bokeh.models.widgets import Tabs # import Tabs digunakna untuk membuat tab 
 from bokeh.io import curdoc # import curdoc 
 from bokeh.plotting import figure, output_file, show
 
-data_idn = pd.read_csv("https://raw.githubusercontent.com/opiq2001/anydata/main/Indonesia_coronavirus_daily_data.csv")
+data_idn = pd.read_csv(join("Indonesia_coronavirus_daily_data.csv"))
 data_idn['Date'] = pd.to_datetime(data_idn['Date'], format='%Y-%m-%d')
 
 # Membuat Tab 
