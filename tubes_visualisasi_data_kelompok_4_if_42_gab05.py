@@ -14,6 +14,8 @@ Original file is located at
 4. Taufiqurrahman (1301190429)
 """
 
+import bokeh.io
+import bokeh.plotting
 from os.path import dirname, join
 import pandas as pd # Import Library Pandas
 from bokeh.models.sources import ColumnDataSource # import struktur fundamental bokeh
@@ -146,15 +148,10 @@ def Tab_Bar(data_idn):
     tab = Panel(child=main_row, title = "Bar Diagram Kasus Harian")
     return tab
 
-# Our main plotting package (must have explicit import of submodules)
-import bokeh.io
-import bokeh.plotting
 
-# Enable viewing Bokeh plots in the notebook
-bokeh.io.output_notebook()
 
-from bokeh.models.widgets import Tabs # import Tabs digunakna untuk membuat tab halaman website
-from bokeh.io import curdoc # import curdoc 
+from bokeh.models.widgets import Tabs 
+from bokeh.io import curdoc 
 from bokeh.plotting import figure, output_file, show
 
 data_idn = pd.read_csv(join("Indonesia_coronavirus_daily_data.csv"))
@@ -167,7 +164,7 @@ tab2 = Tab_LinePlot(data_idn)
 # Masukkan semua tab ke dalam satu aplikasi
 tabs = Tabs(tabs = [tab1, tab2])
 
-# Put the tabs in the current document for display
+# Menampilkan tab ke halaman websita
 curdoc().add_root(tabs)
 curdoc().title = "Data Covid Tiap Provinsi di Indonesia "
 
