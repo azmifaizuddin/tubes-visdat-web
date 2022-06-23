@@ -35,7 +35,7 @@ def Tab_LinePlot(data_idn):
     def provinsi(val, lst): 
         return [x for x in lst if x!= val]
 
-    prov1 = Select(value="JAWA TENGAH", options = provinsi("DKI JAKARTA", List_Prov)) # prov1 menyimpan pilihan provinsi berdasarkan List_Prov
+    prov1 = Select(value="JAWA BARAT", options = provinsi("DKI JAKARTA", List_Prov)) # prov1 menyimpan pilihan provinsi berdasarkan List_Prov
     prov2 = Select(value="DKI JAKARTA", options = provinsi("JAWA BARAT", List_Prov)) # prov2 menyimpan pilihan provinsi berdasarkan List_Prov
 
     # Ambil dan simpan data ke variabel
