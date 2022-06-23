@@ -173,4 +173,3 @@ tabs = Tabs(tabs = [tab1, tab2])
 curdoc().add_root(tabs)
 curdoc().title = "Data Covid Tiap Provinsi di Indonesia "
 
-show(tabs)
